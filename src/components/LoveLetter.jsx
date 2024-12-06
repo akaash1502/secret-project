@@ -215,8 +215,8 @@ const LoveLetter = () => {
           My Kuchi Kuchi, 💖
         </h1>
         <p className="text-base md:text-lg font-serif leading-relaxed text-gray-800 tracking-wide text-justify indent-6">
-          Today marks 10 months of you baring with me and I am so Thankful for you coming into my life
-          & giving me the most beautiful 10 months.
+          Today marks 9 months of you baring with me and I am so Thankful for you coming into my life
+          & giving me the most beautiful 9 months.
         </p>
         <p className="text-base md:text-lg font-serif leading-relaxed text-gray-800 tracking-wide text-justify indent-6 mt-4">
           You are all I could ask for, my support system, and the reason I smile
