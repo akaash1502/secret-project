@@ -144,6 +144,8 @@ import React, { useEffect, useState } from "react";
 
 const LoveLetter = () => {
   const [hearts, setHearts] = useState([]);
+  const [flowers, setflowers] = useState([]);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -163,6 +165,24 @@ const LoveLetter = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setflowers((prevflowers) => [
+        ...prevflowers,
+        {
+          id: Math.random(),
+          left: Math.random() * 100, // Random horizontal position
+          animationDuration: `${3 + Math.random() * 5}s`, // Random animation duration (3s to 5s)
+        },
+      ]);
+    }, 200); // Add a new heart every 200ms
+
+    // Stop generating hearts after 5 seconds
+    setTimeout(() => clearInterval(interval), 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-pink-200 via-purple-300 to-blue-200 flex items-center justify-center px-4 relative overflow-hidden">
       {hearts.map((heart) => (
@@ -175,6 +195,19 @@ const LoveLetter = () => {
           }}
         >
           💖
+        </div>
+      ))}
+
+      {flowers.map((flower) => (
+        <div
+          key={flower.id}
+          className="heart-popup"
+          style={{
+            left: `${flower.left}%`,
+            animationDuration: flower.animationDuration,
+          }}
+        >
+          🌺
         </div>
       ))}
       <div className="bg-[url('https://img.freepik.com/free-vector/aged-paper-texture-background-design_60389-81.jpg?t=st=1733232711~exp=1733236311~hmac=93978de4d3e3d963dfbc580147f0a28bf915fae1e51a7653d1e5e6a161f4834d&w=900')] bg-cover bg-center p-6 rounded-lg shadow-lg w-full sm:w-11/12 md:w-3/4 max-w-2xl border border-gray-300">
