@@ -25,6 +25,7 @@ const milestones = [
   
 ];
 
+
 const Timeline = () => {
     return (
       <div className="min-h-screen bg-gradient-to-r from-pink-200 via-purple-300 to-blue-200 flex flex-col items-center px-4 py-10">
@@ -38,14 +39,14 @@ const Timeline = () => {
           {milestones.map((milestone, index) => (
             <motion.div
               key={index}
-              className={`relative flex flex-col ${
+              className={`relative flex ${
                 index % 2 === 0 ? 'items-start text-left' : 'items-end text-right'
               } mb-10 px-4`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.3 }}
             >
-              {/* Connecting Line Segment */}
+              {/* Connecting Dot */}
               <div
                 className="absolute top-1/2 transform -translate-y-1/2 w-4 h-4 bg-purple-500 rounded-full left-1/2 -translate-x-1/2 z-10"
                 style={{ zIndex: 10 }}
