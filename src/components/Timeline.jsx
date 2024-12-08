@@ -23,9 +23,24 @@ const milestones = [
     details: "What a magical moment that was.",
   },
   {
-    date: "March 12, 2024",
-    event: "First kiss 💋",
-    details: "What a magical moment that was.",
+    date: "March 12, 2024 - June 3, 2024",
+    event: "Falling in Love ❤️",
+    details: "I had the most beautiful of my life with you.",
+  },
+  {
+    date: "June 3, 2024 - November 13, 2024",
+    event: "Long Distance 🥺",
+    details: "Texts, Calls & Video Calls and laughs with you",
+  },
+  {
+    date: "November 14, 2024",
+    event: "We met again 😭",
+    details: "God, It was so good 😩",
+  },
+  {
+    date: "December 9, 2024 - ∞",
+    event: "사랑해요 🫰🏻",
+    details: "I wish for a future with You, My Love",
   },
 ];
 
