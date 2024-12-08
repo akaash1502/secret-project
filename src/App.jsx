@@ -19,6 +19,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainBox from './components/MainBox';
 import LoveLetter from './components/LoveLetter';
+import Timeline from './components/Timeline';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainBox />} />
             <Route path="/love-letter" element={<LoveLetter />} />
+            <Route path="/timeline" element={<Timeline />} />
           </Routes>
         {/* </div> */}
         {/* <Footer /> */}

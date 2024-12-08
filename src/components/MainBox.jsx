@@ -153,6 +153,14 @@ const MainBox = () => {
       >
         Here is a message for you 💌
       </button>
+      <button
+  onClick={() => navigate('/timeline')}
+  className="mt-6 bg-green-500 text-white px-4 py-2 rounded-md font-body hover:bg-green-700 transition"
+>
+  Relive Our Journey 📖
+</button>
+
+
     </div>
     </div>
   );
