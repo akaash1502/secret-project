@@ -27,30 +27,38 @@ const milestones = [
 
 const Timeline = () => {
     return (
-      <div className="min-h-screen bg-gradient-to-r from-pink-200 via-purple-300 to-blue-200 flex flex-col items-center p-6">
-        <h1 className="text-4xl font-heading text-purple-700 mb-8">Our Journey Together</h1>
-        <div className="w-full max-w-4xl relative">
+      <div className="min-h-screen bg-gradient-to-r from-pink-200 via-purple-300 to-blue-200 flex flex-col items-center px-4 py-10">
+        <h1 className="text-4xl font-heading text-purple-700 mb-10 text-center">
+          Our Journey Together
+        </h1>
+        <div className="relative w-full max-w-3xl">
+          {/* Vertical Line */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-purple-500 h-full"></div>
+  
           {milestones.map((milestone, index) => (
             <motion.div
               key={index}
-              className={`relative mb-12 ${
-                index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'
-              } text-center`}
+              className={`relative flex flex-col ${
+                index % 2 === 0 ? 'items-start text-left' : 'items-end text-right'
+              } mb-10 px-4`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.3 }}
             >
-              {/* Vertical Line */}
-              <div className="absolute w-2 bg-purple-500 left-1/2 transform -translate-x-1/2 top-0 bottom-0"></div>
-  
-              {/* Milestone Card */}
+              {/* Connecting Line Segment */}
               <div
-                className={`bg-white rounded-lg shadow-lg p-6 inline-block ${
-                  index % 2 === 0 ? 'lg:ml-6' : 'lg:mr-6'
-                } mx-auto`}
+                className="absolute top-1/2 transform -translate-y-1/2 w-4 h-4 bg-purple-500 rounded-full left-1/2 -translate-x-1/2 z-10"
+                style={{ zIndex: 10 }}
+              ></div>
+  
+              {/* Timeline Card */}
+              <div
+                className={`bg-white rounded-lg shadow-lg p-6 w-full max-w-xs sm:max-w-sm lg:max-w-md ${
+                  index % 2 === 0 ? 'ml-6' : 'mr-6'
+                }`}
               >
-                <h3 className="text-xl font-semibold text-purple-700">{milestone.date}</h3>
-                <h4 className="text-lg font-bold text-gray-700">{milestone.event}</h4>
+                <h3 className="text-xl font-bold text-purple-700">{milestone.date}</h3>
+                <h4 className="text-lg font-semibold text-gray-800">{milestone.event}</h4>
                 <p className="text-gray-600">{milestone.details}</p>
               </div>
             </motion.div>
@@ -60,4 +68,4 @@ const Timeline = () => {
     );
   };
   
-export default Timeline;
+  export default Timeline;
