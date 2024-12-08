@@ -3,24 +3,29 @@ import { motion } from 'framer-motion';
 
 const milestones = [
   {
-    date: "March 10, 2023",
+    date: "February 22, 2024",
     event: "We met for the first time 💕",
-    details: "The day I knew my life was about to change forever.",
+    details: "The day my life changed forever.",
   },
   {
-    date: "April 15, 2023",
-    event: "Our first date 🥰",
-    details: "An evening filled with laughter and connection.",
+    date: "February 29, 2024",
+    event: "I confessed 🥰",
+    details: "It was such a memorable day for different reasons.",
   },
   {
-    date: "July 1, 2023",
-    event: "First 'I love you' 💖",
-    details: "The most magical moment of my life.",
+    date: "March 7, 2024",
+    event: "좋아해요 💖",
+    details: "Smoothest confession ever to exist.",
   },
   {
-    date: "Today",
-    event: "9 months together 🥳",
-    details: "Every day with you is a celebration of love.",
+    date: "March 12, 2024",
+    event: "First kiss 💋",
+    details: "What a magical moment that was.",
+  },
+  {
+    date: "March 12, 2024",
+    event: "First kiss 💋",
+    details: "What a magical moment that was.",
   },
 ];
 
