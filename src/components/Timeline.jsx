@@ -37,7 +37,8 @@ const Timeline = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.3 }}
           >
-            <div className="absolute w-2 bg-purple-500 left-1/2 transform -translate-x-1/2 top-0 bottom-0"></div>
+            {/* <div className="absolute w-2 bg-purple-500 left-1/2 transform -translate-x-1/2 top-0 bottom-0"></div> */}
+            <div className="absolute w-2 bg-purple-500 left-1/2 transform -translate-x-1/2 top-0 bottom-0 hidden md:block"></div>
             <div
               className={`bg-white rounded-lg shadow-lg p-6 inline-block ${
                 index % 2 === 0 ? 'ml-6' : 'mr-6'
@@ -55,3 +56,4 @@ const Timeline = () => {
 };
 
 export default Timeline;
+
